@@ -1,0 +1,61 @@
+---
+title: "Observations"
+author: "Luc Doan"
+date: "Friday, January 15, 2016"
+output: html_document
+---
+
+This document is created to explain about this Shiny application for. The application is run to show the observations of 3 Datasets in R package: Rock, Pressure and Cars.  
+
+
+## ROCK
+Measurements on 48 rock samples from a petroleum reservoir. A data frame with 48 rows and 4 numeric columns.
+
+area  - area of pores space, in pixels out of 256 by 256.
+
+peri  - perimeter (peri) in pixels
+
+shape - perimeter/sqrt(area)
+
+perm  - permeability in milli-Darcies
+
+Twelve core samples from petroleum reservoirs were sampled by 4 cross-sections. Each core sample was measured for permeability, and each cross-section has total area of pores, total perimeter of pores, 
+and shape.R 
+
+## PRESURE
+Data on the relation between temperature in degrees Celsius and vapor pressure of mercury in millimeters (of mercury).
+A data frame with 19 observations on 2 variables.
+
+## CARS
+The data give the speed of cars and the distances taken to stop. Note that the data were recorded in the 1920s.
+A data frame with 50 observations on 2 variables.
+
+## APPLICATION
+The application has 2 different parts: The input sidebar with Update button and the output mainpage with Summary and the number of observations. 
+
+The input sidebar with controls to select a dataset rock, pressure or cars and specify the number of observations to view. The help text function is also used to include clarifying text. Most notably, the inclusion of a Update View button defers the rendering of output until the user explicitly clicks the button (rather than doing it immediately when inputs change). This is useful if the computations required to render output are inordinately time-consuming. 
+
+The output mainpage shows the summary of dataset selection and its number of observation. Everytime Update View button is clicked, this mainpage will be refreshed.
+
+## RUN APPLICATION
+
+- Select a dataset rock, presuure or cars;
+- Enter number of observations;
+- Click Update View button
+
+Mainpage will be refreshed to show new result to view.
+
+Note: when the application is first run, default input value of dataset is rock and number of observations to view will be 10.
+
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+
